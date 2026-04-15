@@ -1,0 +1,106 @@
+/* Importing Golos font */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  --clr-disconnected: #ff544f;
+  --clr-connected: #00d824;
+  --main: #ffd900;
+
+  --shadow: 2px 2px 4px black;
+  --background: #181717de;
+  --background-full: #181717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Loos Normal", "Golos Text", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: var(--shadow);
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  width: 100%;
+}
+
+#connection-status {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  line-height: 120%;
+  border-radius: 10px;
+  background: var(--background);
+}
+
+.connected {
+  color: var(--clr-connected);
+  opacity: 0;
+  transition: opacity 1s 2s;
+}
+
+.disconnected {
+  color: var(--clr-disconnected);
+  opacity: 1;
+}
+
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--background-full),
+    var(--background) 25%,
+    transparent
+  );
+
+  padding-bottom: 20px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-wrapper {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.profile {
+  height: 30px;
+  border-radius: 5px;
+}
+
+span {
+  color: var(--main);
+}
+
+.clock-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border-radius: 5px;
+  margin: 10px;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+#time {
+  color: var(--main);
+}
