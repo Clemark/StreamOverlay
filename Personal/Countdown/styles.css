@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  --background: #1b1b1baa;
+  --main: #ffe658;
+  --main2: #ff9900;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+}
+
+.main-wrapper {
+  font-family: "Loos Normal", "BBH Hegarty", sans-serif;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  position: relative;
+  text-align: center;
+  font-size: 4vw;
+  color: black;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  background: linear-gradient(var(--main), var(--main2));
+  padding: 0.5rem 2rem 0.3rem;
+  border-radius: 20px;
+  border: 5px solid black;
+  z-index: 10;
+  animation: rotatingbubble 3s linear infinite;
+  box-shadow: 5px 5px;
+}
+
+@keyframes rotatingbubble {
+  25% {
+    rotate: 1deg;
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    rotate: -1deg;
+    transform: translateY(10px);
+  }
+}
+
+.timer-wrapper {
+  background: linear-gradient(var(--main), var(--main2));
+  transform: translateY(-20px);
+  padding: 10px;
+
+  text-shadow: 2px 2px 7px var(--background);
+  z-index: 1;
+  border-radius: 49px;
+  border: 5px solid black;
+  rotate: -2deg;
+  animation: float 6s infinite;
+  box-shadow: 5px 5px;
+}
+
+.timer {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  font-size: 18vw; /* bigger responsive font */
+  color: black;
+  height: 1em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.04em;
+  width: 100%;
+  justify-content: center;
+  background: white;
+  width: fit-content;
+  padding: 20px 40px 5px;
+  border: 5px solid black;
+  border-radius: 40px;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.scroll-wrap {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease-in-out;
+}
+
+.digit {
+  height: 1em;
+  line-height: 1em;
+  font-size: 1em;
+}
