@@ -24,22 +24,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  animation: float 10s infinite;
 }
 
 .intro {
-  position: relative;
-  text-align: center;
-  font-size: 4vw;
-  color: black;
-  justify-content: center;
-  letter-spacing: 0.05em;
   background: linear-gradient(var(--main), var(--main2));
   padding: 0.5rem 2rem 0.3rem;
-  border-radius: 20px;
+  border-radius: 1.6rem;
   border: 5px solid black;
-  z-index: 10;
   animation: rotatingbubble 3s linear infinite;
-  box-shadow: 5px 5px;
+  font-size: 2rem;
+
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 5px black;
 }
 
 @keyframes rotatingbubble {
@@ -58,35 +57,30 @@ body {
 
 .timer-wrapper {
   background: linear-gradient(var(--main), var(--main2));
-  transform: translateY(-20px);
-  padding: 10px;
-
-  text-shadow: 2px 2px 7px var(--background);
-  z-index: 1;
-  border-radius: 49px;
+  border-radius: 4.7rem;
   border: 5px solid black;
-  rotate: -2deg;
-  animation: float 6s infinite;
-  box-shadow: 5px 5px;
+  padding: 10px;
+  margin-top: -20px;
+  box-shadow: 0 15px black;
 }
 
 .timer {
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  font-size: 18vw; /* bigger responsive font */
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff,
+    #ffffff 10px,
+    #fff5e8 10px,
+    #fff5e8 20px);
+  border-radius: 4rem;
+  border: 3px solid var(--main2);
   height: 1em;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  gap: 0.04em;
-  width: 100%;
-  justify-content: center;
-  background: white;
-  width: fit-content;
-  padding: 20px 40px 5px;
-  border: 5px solid black;
-  border-radius: 40px;
+
+  font-size: 9rem;
+  padding: 1rem 4rem .5rem;
 }
 
 @keyframes float {
@@ -96,18 +90,21 @@ body {
 }
 
 .scroll-wrap {
+  padding: 0;s
   display: block;
   height: 1em;
   overflow: hidden;
 }
 
 .scroll-inner {
+  padding: 0;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease-in-out;
 }
 
 .digit {
+  padding: 0;
   height: 1em;
   line-height: 1em;
   font-size: 1em;
