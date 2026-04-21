@@ -1,0 +1,75 @@
+/* INFO: Importing Golos font */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+:root {
+  color-scheme: light;
+
+  --clr-disconnected: #ff544f;
+  --clr-connected: #00d824;
+
+  --shadow: 2px 2px 5px black;
+  --background: #772c2c28;
+  --background2: #000000a8;
+
+  --red: #fc4b1f;
+  --green: #55f136;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Loos Normal", "Golos Text", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  width: 100%;
+}
+
+.main-wrapper {
+  width: 250px;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image:
+    linear-gradient(var(--background), var(--background2)),
+    url("https://media.valorant-api.com/playercards/d79b67c0-4a2b-d865-a6c4-b3bca5356200/wideart.png");
+  background-size: cover;
+  color: white;
+  text-shadow: var(--shadow);
+}
+
+.score {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.points {
+  font-weight: 500;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+.negative {
+  color: var(--red);
+}
+
+.negative::before {
+  content: "↓";
+}
+
+.positive {
+  color: var(--green);
+}
+.positive::before {
+  content: "↑";
+}
