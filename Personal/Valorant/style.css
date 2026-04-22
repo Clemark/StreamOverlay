@@ -15,30 +15,31 @@
   --green: #55f136;
 }
 
-html,
-body {
+* {
   height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  width: 100%;
   font-family: "Loos Normal", "Golos Text", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
-  width: 100%;
-}
-
 .main-wrapper {
   width: 250px;
   height: 50px;
+  line-height: 1rem;
+  padding-top: 10px;
 
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
 
   background-image:
     linear-gradient(var(--background), var(--background2)),
@@ -51,6 +52,7 @@ body {
 .score {
   font-weight: 700;
   font-size: 2rem;
+  line-height: 100%;
 }
 
 .points {
